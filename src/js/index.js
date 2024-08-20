@@ -13,5 +13,3 @@ const root = createRoot(document.querySelector("#app"));
 
 //render your react application
 root.render(<Layout />);
-
-console.log("BASENAME:", process.env.BASENAME);
