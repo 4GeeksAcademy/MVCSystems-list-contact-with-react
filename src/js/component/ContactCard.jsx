@@ -26,42 +26,43 @@ const ContactCard = ({ name, address, phone, email, id }) => {
   };
 
   return (
-    <div className="d-flex align-items-center border rounded p-3 mb-0">
+    <div className="d-flex align-items-center border rounded p-4 mb-0">
       <div className="col-3 text-center">
         <img
-          src="https://picsum.photos/id/237/200/300"
-          alt={`Profile of ${name}`}
+          src="https://picsum.photos/id/91/3504/2336.jpg"
           className="img-fluid rounded-circle mx-auto"
           style={{
-            width: "150px",
-            height: "150px",
+            width: "130px",
+            height: "130px",
             objectFit: "cover",
-            border: "2px solid #ddd",
+            border: "3px solid #ddd",
           }}
         />
       </div>
-      <div className="col-9 d-flex flex-column">
+      <div className="col-9 d-flex flex-column justify-content-between">
         <div className="d-flex justify-content-between align-items-center">
           <div>
-            <h2 className="h5">{name}</h2>
+            <h2 className="h5 mb-2">{name}</h2>
           </div>
-          <div className="d-flex justify-content-between align-items-end gap-2">
+          <div className="d-flex align-items-end gap-3">
             <i className="bi bi-pencil-fill" onClick={handleEditing}></i>
             <ConfirmationModal id={`contact-${id}`} handleCLick={handleCLick} />
           </div>
         </div>
-        <p className="text-muted">
-          <i className="bi bi-geo-alt-fill me-2"></i>
-          {address}
-        </p>
-        <p className="text-muted">
-          <i className="bi bi-telephone-fill me-2"></i>
-          {phone}
-        </p>
-        <p className="text-muted">
-          <i className="bi bi-envelope-fill me-2"></i>
-          {email}
-        </p>
+        <div>
+          <p className="text-muted mb-2">
+            <i className="bi bi-geo-alt-fill me-2"></i>
+            {address}
+          </p>
+          <p className="text-muted mb-2">
+            <i className="bi bi-telephone-fill me-2"></i>
+            {phone}
+          </p>
+          <p className="text-muted mb-2">
+            <i className="bi bi-envelope-fill me-2"></i>
+            {email}
+          </p>
+        </div>
       </div>
     </div>
   );
